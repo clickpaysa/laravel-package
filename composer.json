@@ -17,7 +17,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Paytabscom\\Laravel_paytabs\\": "src/"
+            "Clickpaysa\\Laravel_package\\": "src/"
         }
     }
 }

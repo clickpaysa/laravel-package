@@ -23,7 +23,7 @@ This Package requires no external dependencies.
 
 INSTALLATION
 ------------
-- composer require Clickpaysa/laravel_clickpay
+- composer require clickpaysa/laravel_package
 
 CONFIGURATION
 -------------
@@ -31,7 +31,7 @@ CONFIGURATION
 
 * Go to _config/app.php_ and in the providers array add
 
-        Clickpaysa\Laravel_clickpay\PaypageServiceProvider::class,
+        Clickpaysa\Laravel_package\PaypageServiceProvider::class,
 
 * Create the package config file:
 
@@ -57,7 +57,7 @@ Usage
 
 * create pay page
 
-        use Clickpaysa\Laravel_clickpay\Facades\paypage;
+        use Clickpaysa\Laravel_package\Facades\paypage;
 
         $pay= paypage::sendPaymentCode('all')
                ->sendTransaction('sale')

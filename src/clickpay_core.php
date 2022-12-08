@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Clickpaysa\Laravel_clickpay;
+namespace Clickpaysa\Laravel_package;
 
 
 class clickpay_core
@@ -625,7 +625,7 @@ class ClickpayApi
     //     ],
     // ];
 
-    // const BASE_URL = 'https://secure.clickpay.com.sa/';
+    const BASE_URL = 'https://secure.clickpay.com.sa/';
 
     const URL_REQUEST = 'payment/request';
     const URL_QUERY = 'payment/query';
@@ -645,15 +645,6 @@ class ClickpayApi
 
     //
 
-    public static function getEndpoints()
-    {
-        $endpoints = [];
-        foreach (ClickpayApi::BASE_URLS as $key => $value) {
-            $endpoints[$key] = $value['title'];
-        }
-        return $endpoints;
-    }
-
     public static function getInstance($region, $merchant_id, $key)
     {
         if (self::$instance == null) {
@@ -667,7 +658,7 @@ class ClickpayApi
 
     private function __construct($region, $profile_id, $server_key)
     {
-        $this->base_url = self::BASE_URLS[$region]['endpoint'];
+        $this->base_url = self::BASE_URL;
         $this->setAuth($profile_id, $server_key);
     }
 
