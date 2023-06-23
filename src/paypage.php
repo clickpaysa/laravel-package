@@ -74,9 +74,9 @@ class paypage
         return $this;
     }
 
-    public function sendFramed($on = false)
+    public function sendFramed($on = false, $redirect_target = 'iframe')
     {
-        $this->clickpay_core->set09Framed($on);
+        $this->clickpay_core->set09Framed($on, $redirect_target);
         return $this;
     }
 
