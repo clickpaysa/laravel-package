@@ -1,6 +1,6 @@
 {
     "name": "clickpaysa/laravel_package",
-    "version": "0.5.0",
+    "version": "1.1.0",
     "type": "composer-package",
     "description": "Official laravel package to implement ClickPay integration with laravel apps",
     "homepage": "https://clickpay.com.sa",
