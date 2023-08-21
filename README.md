@@ -172,7 +172,7 @@ Now, you need to configure the plugin with the class\method that will grab the p
 
 * In your website _config/clickpay.php_ file, add the following:
 
-        'callback' => env('clickpay_ipn_callback', new namespace\your_class() ),
+        'callback' => env('clickpay_ipn_callback', namespace\your_class::class ),
 
 * In your class add new method, it must named: **updateCartByIPN**
 

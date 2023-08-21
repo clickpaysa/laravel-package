@@ -16,7 +16,8 @@ class ClickpayLaravelListenerApi extends BaseController
         try{
             $ipnRequest= new IpnRequest($request);
 
-            $callback = config('clickpay.callback');
+            $callbackClass = config('clickpay.callback');
+            $callback = new $callbackClass();
             if(is_object($callback) && method_exists($callback, 'updateCartByIPN') ){
                 $callback->updateCartByIPN($ipnRequest);
             }
